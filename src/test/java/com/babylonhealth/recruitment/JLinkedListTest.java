@@ -2,6 +2,8 @@ package com.babylonhealth.recruitment;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.stream.IntStream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -79,16 +81,4 @@ public class JLinkedListTest {
         assertThrows(JLinkedList.CyclicalException.class, list2::length);
         assertThrows(JLinkedList.CyclicalException.class, list3::length);
     }
-//
-//    @Test
-//    void testBigCycle() {
-//        JLinkedList list1 = newList(IntStream.range(0, 10_000_000).toArray());
-//        JLinkedList list2 = newList(IntStream.range(10_000_000, 20_000_000).toArray());
-//        list1.setNext(list2);
-//        list2.setNext(list2);
-//        assertTrue(list1.hasCycle());
-//        assertTrue(list2.hasCycle());
-//        assertThrows(JLinkedList.CyclicalException.class, list1::length);
-//        assertThrows(JLinkedList.CyclicalException.class, list2::length);
-//    }
 }
